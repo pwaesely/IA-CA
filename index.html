@@ -422,7 +422,7 @@ h1,h2,h3,h4,.hero .n,.kpi b,.cnt,.ring b,.btn,.top h2,.wtop h2,.ecghead h2,.cta 
     <div class="hdr"><img class="hlogo" data-img="logo" alt="IA-CA"><button class="ib" onclick="toast('🔔 1 complément demandé par Paris')">🔔</button></div>
     <div class="hello" style="padding-top:12px">
       <img class="av" data-img="doc" alt="">
-      <h2><small>Bonjour</small>Dr Aminata Diallo</h2>
+      <h2><small>Bonjour</small>Dr Abdoulaye Diallo</h2>
     </div>
     <div class="body pb">
       <div class="off"><span class="dot"></span><span style="flex:1">Hors ligne · tout fonctionne sur le téléphone</span><span class="tag t-a">3 à envoyer</span></div>
@@ -520,8 +520,8 @@ h1,h2,h3,h4,.hero .n,.kpi b,.cnt,.ring b,.btn,.top h2,.wtop h2,.ecghead h2,.cta 
 
       <div class="h3">Intervenants</div>
       <div class="fld"><label>Médecin référent</label>
-        <div class="person" style="position:relative"><img data-img="doc" alt=""><div class="t" id="refname">Dr Aminata Diallo<small>Vous · CHU Fann, Dakar</small></div><span class="tag t-g">Connecté</span>
-          <select id="refsel" onchange="setRef()"><option value="0">Dr Aminata Diallo (vous)</option><option value="1">Dr Ousmane Faye · Kaolack</option><option value="2">Dr Mariama Cissé · Ziguinchor</option></select></div>
+        <div class="person" style="position:relative"><img data-img="doc" alt=""><div class="t" id="refname">Dr Abdoulaye Diallo<small>Vous · CHU Fann, Dakar</small></div><span class="tag t-g">Connecté</span>
+          <select id="refsel" onchange="setRef()"><option value="0">Dr Abdoulaye Diallo (vous)</option><option value="1">Dr Ousmane Faye · Kaolack</option><option value="2">Dr Mariama Cissé · Ziguinchor</option></select></div>
       </div>
       <div class="fld"><label>Coordinatrice du dossier à Paris <span class="req">*</span></label>
         <div class="person" style="position:relative"><span class="ini" id="coini">CD</span><div class="t" id="coname">Claire Dubois<small>Équipe dossiers · Paris</small></div><span style="color:var(--mute);font-size:18px">▾</span>
@@ -703,7 +703,7 @@ h1,h2,h3,h4,.hero .n,.kpi b,.cnt,.ring b,.btn,.top h2,.wtop h2,.ecghead h2,.cta 
   <section class="scr" id="s-prof">
     <div class="top"><h2>Mon espace</h2></div>
     <div class="body pb">
-      <div class="card" style="display:flex;gap:14px;align-items:center"><img class="av" data-img="doc" style="width:62px;height:62px" alt=""><div><b style="font-size:17px;color:var(--navy)">Dr Aminata Diallo</b><div style="font-size:13px;color:var(--mute);font-weight:700">Médecin référent · CHU Fann · Sénégal</div><span class="tag t-r" style="margin-top:6px">♥ 38 enfants accompagnés</span></div></div>
+      <div class="card" style="display:flex;gap:14px;align-items:center"><img class="av" data-img="doc" style="width:62px;height:62px" alt=""><div><b style="font-size:17px;color:var(--navy)">Dr Abdoulaye Diallo</b><div style="font-size:13px;color:var(--mute);font-weight:700">Médecin référent · CHU Fann · Sénégal</div><span class="tag t-r" style="margin-top:6px">♥ 38 enfants accompagnés</span></div></div>
       <div class="card"><b style="color:var(--navy)">🤝 Parrainer des médecins</b><div style="font-size:13px;color:var(--mute);font-weight:700;margin:4px 0 8px">4 / 10 médecins parrainés · 20 référents → 1 000 médecins</div><div class="mini" style="height:8px"><i class="g" style="width:40%"></i></div></div>
       <div class="card" style="padding:4px 14px">
         <div class="tg"><span>🌐 Langue<small>Français / English</small></span><span class="tag t-n">FR</span></div>
@@ -869,7 +869,7 @@ function ageCheck(){
   `<div class="info i-a fade-in"><span class="ic">!</span><span><b>${ageTxt(m)} · hors période favorable ${S.diag}</b> (${w[2]}). Point de vigilance signalé à Paris, non bloquant.</span></div>`;
   $('#pcabox').classList.toggle('hidden',S.diag!=='PCA');
 }
-const REFS=[['Dr Aminata Diallo','Vous · CHU Fann, Dakar',1],['Dr Ousmane Faye','Pédiatre · Kaolack',0],['Dr Mariama Cissé','Généraliste · Ziguinchor',0]];
+const REFS=[['Dr Abdoulaye Diallo','Vous · CHU Fann, Dakar',1],['Dr Ousmane Faye','Pédiatre · Kaolack',0],['Dr Mariama Cissé','Généraliste · Ziguinchor',0]];
 function setRef(){const r=REFS[+$('#refsel').value];$('#refname').innerHTML=`${r[0]}<small>${r[1]}</small>`;$('#refname').nextElementSibling.style.visibility=r[2]?'visible':'hidden';}
 function setCoord(){const n=$('#cosel').value;S.coord=n;$('#coname').innerHTML=`${n}<small>Équipe dossiers · Paris</small>`;$('#coini').textContent=n.split(' ').map(x=>x[0]).join('');}
 function phCount(){const n=Object.keys(S.photos).length;const t=$('#phcount');t.textContent=n+'/2 obligatoires'+(S.extra.length?' · +'+S.extra.length:'');t.className='tag '+(n===2?'t-g':'t-n');t.style.textTransform='none';t.style.letterSpacing='0';}
@@ -1069,7 +1069,7 @@ Les parents sont très mobilisés.${fam} Le suivi avant et après l'intervention
 Je reste à votre disposition pour tout complément.
 
 Bien confraternellement,
-Dr Aminata Diallo`;
+Dr Abdoulaye Diallo`;
 }
 function lettAI(){$('#lettre').value=lettText();lettCount();toast('✨ Trame proposée — relisez et complétez');}
 function lettCount(){const n=$('#lettre').value.trim().length;$('#lettn').textContent=n+' caractère'+(n>1?'s':'');S.lettre=n>=80;
